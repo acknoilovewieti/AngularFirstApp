@@ -1,0 +1,13 @@
+.first{
+    font-weight: bold;
+}
+.last{
+    font-weight: bold;
+    font-style: italic;
+}
+.even{
+    background-color: aquamarine;
+}
+.odd{
+    background-color: bisque;
+}
