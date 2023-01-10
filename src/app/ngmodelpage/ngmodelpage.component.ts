@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgmodelpageComponent implements OnInit {
 
+  typedtext: string = "Please type here";
+
   constructor() { }
 
   ngOnInit(): void {

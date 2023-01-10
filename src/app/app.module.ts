@@ -6,7 +6,7 @@ import { ShowDateComponent } from './show-date/show-date.component';
 import { NgstylepageComponent } from './ngstylepage/ngstylepage.component';
 import { NgmodelpageComponent } from './ngmodelpage/ngmodelpage.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: ShowDateComponent},
@@ -24,6 +24,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
