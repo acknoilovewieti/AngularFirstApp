@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgstylepageComponent implements OnInit {
 
+  visibility: boolean = true;
+  pinkcolor = "pink";
+
+  toggle() {
+    this.visibility = !this.visibility;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

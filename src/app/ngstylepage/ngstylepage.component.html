@@ -1,1 +1,13 @@
-<p>ngstylepage works!</p>
+<div [ngClass]="{invisible: visibility}">
+    <h3>(8) NgStyle NgClass</h3>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, nobis?</p>
+   
+    <p [ngClass]="{class1: true}" >Example of text with green color (NgClass)</p>
+    
+    <p [class.bluetext]="true" >Example of text with blue color via (class).</p>
+
+    <p [ngStyle]="{'color':pinkcolor}" >Example of text with pink color via (NgStyle).</p>
+</div>
+
+<button (click)="toggle()">Toggle</button>
