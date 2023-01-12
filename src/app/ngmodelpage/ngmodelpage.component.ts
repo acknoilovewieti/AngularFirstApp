@@ -1,3 +1,4 @@
+import { LogServiceService } from './../log-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,9 @@ export class NgmodelpageComponent implements OnInit {
 
   typedtext: string = "Please type here";
 
-  constructor() { }
+  constructor(svc: LogServiceService) { 
+    svc.consoleDebug("NgmodelpageComponent");
+  }
 
   ngOnInit(): void {
   }

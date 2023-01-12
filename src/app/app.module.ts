@@ -7,6 +7,7 @@ import { NgstylepageComponent } from './ngstylepage/ngstylepage.component';
 import { NgmodelpageComponent } from './ngmodelpage/ngmodelpage.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { LogServiceService } from './log-service.service';
 
 const appRoutes: Routes = [
   {path: '', component: ShowDateComponent},
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [LogServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

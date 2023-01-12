@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Routes } from '@angular/router';
+import { AfterContentChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { LogServiceService } from '../log-service.service';
 
 @Component({
   selector: 'app-show-date',
@@ -12,11 +14,13 @@ export class ShowDateComponent implements OnInit {
   loggedIn: boolean = true;
   isCollapsed: boolean = true;
 
-  constructor() { 
+  constructor(svc: LogServiceService) { 
     this.message = new Date().toLocaleTimeString();
     setInterval(() => {
       this.message = new Date().toLocaleTimeString();
     }, 1000); 
+
+    svc.consoleDebug("ShowDateComponent");
   }
 
   toggleCollapse(){
@@ -25,5 +29,4 @@ export class ShowDateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

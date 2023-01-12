@@ -1,3 +1,4 @@
+import { LogServiceService } from './../log-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +15,9 @@ export class NgstylepageComponent implements OnInit {
     this.visibility = !this.visibility;
   }
 
-  constructor() { }
+  constructor(svc: LogServiceService) {
+    svc.consoleDebug("NgstylepageComponent");
+   }
 
   ngOnInit(): void {
   }
