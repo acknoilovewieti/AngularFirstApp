@@ -7,7 +7,7 @@ export class LogServiceService {
 
   constructor() { }
 
-  consoleDebug(arg: string) {
+  consoleLog(arg: string) {
     console.log("Run component:" + arg);
   }
 }

@@ -16,7 +16,7 @@ export class NgstylepageComponent implements OnInit {
   }
 
   constructor(svc: LogServiceService) {
-    svc.consoleDebug("NgstylepageComponent");
+    svc.consoleLog("NgstylepageComponent");
    }
 
   ngOnInit(): void {

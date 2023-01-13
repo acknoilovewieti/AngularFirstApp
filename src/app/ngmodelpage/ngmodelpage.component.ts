@@ -11,7 +11,7 @@ export class NgmodelpageComponent implements OnInit {
   typedtext: string = "Please type here";
 
   constructor(svc: LogServiceService) { 
-    svc.consoleDebug("NgmodelpageComponent");
+    svc.consoleLog("NgmodelpageComponent");
   }
 
   ngOnInit(): void {

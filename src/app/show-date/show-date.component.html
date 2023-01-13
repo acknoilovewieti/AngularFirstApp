@@ -30,3 +30,15 @@
             velit non, eveniet obcaecati dolorem sint exercitationem.</p>
     </div>
 </div>
+
+<h3>(11) Http Request</h3>
+<div>
+    User name: <input type="text" [(ngModel)]="userName">
+    <button (click)="search()">Search</button>
+    <div *ngIf="response">
+        <img src="{{response.avatar_url}}" alt="">
+        <p>Name: {{response.login}}</p>
+        <p>Repos: {{response.public_repos}}</p>
+        <p>Bio: {{response.bio}}</p>
+    </div>
+</div>

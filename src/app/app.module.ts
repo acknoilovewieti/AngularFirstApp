@@ -8,6 +8,8 @@ import { NgmodelpageComponent } from './ngmodelpage/ngmodelpage.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LogServiceService } from './log-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { GithubService } from './github.service';
 
 const appRoutes: Routes = [
   {path: '', component: ShowDateComponent},
@@ -26,9 +28,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [LogServiceService],
+  providers: [LogServiceService, GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
